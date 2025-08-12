@@ -1,0 +1,34 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "zenburn",
+  "mcp": {
+    "MCP_DOCKER": {
+      "type": "local",
+      "command": [
+        "docker",
+        "mcp",
+        "gateway",
+        "run"
+      ]
+    },
+    "cogitare": {
+      "type": "local",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "-i",
+        "--init",
+        "--security-opt",
+        "no-new-privileges",
+        "--cpus",
+        "1",
+        "--memory",
+        "2Gb",
+        "--pull",
+        "always",
+        "ghcr.io/anntnzrb/cogitare:latest"
+      ]
+    }
+  }
+}
