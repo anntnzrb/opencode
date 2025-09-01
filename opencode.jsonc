@@ -1,6 +1,33 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "zenburn",
+
+  /* **************************************************************************
+  * MODEL
+  * ************************************************************************ */
+  "model": "anthropic/claude-sonnet-4-20250514",
+  "small_model": "github-copilot/gpt-4.1",
+
+  /* **************************************************************************
+  * PERMISSIONS
+  * ************************************************************************ */
+  "permission": {
+    "edit": "allow",
+    "webfetch": "allow",
+    "bash": {
+      "git push": "ask",
+      "npm add": "ask",
+      "bun add": "ask",
+      "*": "allow"
+    }
+  },
+  /* **************************************************************************
+  * UI/UX
+  * ************************************************************************ */
+  "theme": "system",
+
+  /* **************************************************************************
+  * MCPs
+  * ************************************************************************ */
   "mcp": {
     "MCP_DOCKER": {
       "type": "local",
@@ -11,24 +38,19 @@
         "run"
       ]
     },
-    "cogitare": {
-      "type": "local",
-      "command": [
-        "docker",
-        "run",
-        "--rm",
-        "-i",
-        "--init",
-        "--security-opt",
-        "no-new-privileges",
-        "--cpus",
-        "1",
-        "--memory",
-        "2Gb",
-        "--pull",
-        "always",
-        "ghcr.io/anntnzrb/cogitare:latest"
-      ]
+    "sequentialthinking": {
+      "type": "remote",
+      "url": "https://remote.mcpservers.org/sequentialthinking/mcp"
+    },
+    "deepwiki": {
+      "type": "remote",
+      "url": "https://mcp.deepwiki.com/mcp"
     }
-  }
+  },
+
+  /* **************************************************************************
+  * MISC
+  * ************************************************************************ */
+  "autoupdate": true,
+  "share": "manual"
 }
