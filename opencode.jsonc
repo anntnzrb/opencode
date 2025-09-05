@@ -63,6 +63,6 @@
   * MISC
   * ************************************************************************ */
   "instructions": ["{env:HOME}/.config/agents/instructions.md"],
-  "autoupdate": true,
+  "autoupdate": false,
   "share": "manual"
 }
