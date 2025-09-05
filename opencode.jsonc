@@ -15,9 +15,26 @@
     "webfetch": "allow",
     "bash": {
       "git push": "ask",
-      "npm add": "ask",
+      "npm install": "ask",
       "bun add": "ask",
+      "bun install": "ask",
       "*": "allow"
+    }
+  },
+
+  /* **************************************************************************
+   * LSP
+   * ************************************************************************ */
+  "lsp": {
+    "typescript": {
+      "disabled": false
+    },
+    "eslint": {
+      "disabled": false,
+      "initialization": {
+        "codeActionOnSave": { "mode": "all" },
+        "useESLintClass": true
+      }
     }
   },
   /* **************************************************************************
