@@ -23,20 +23,33 @@
   },
 
   /* **************************************************************************
-   * LSP
-   * ************************************************************************ */
-  "lsp": {
-    "typescript": {
-      "disabled": false
-    },
-    "eslint": {
-      "disabled": false,
-      "initialization": {
-        "codeActionOnSave": { "mode": "all" },
-        "useESLintClass": true
+  * PROVIDERS
+  * ************************************************************************ */
+  "provider": {
+    "chutes-custom": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Chutes",
+      "options": {
+        "baseURL": "https://llm.chutes.ai/v1"
+      },
+      "models": {
+        "moonshotai/Kimi-K2-Instruct-0905": {
+          // https://huggingface.co/moonshotai/Kimi-K2-Instruct-0905
+          "name": "Kimi K2 (0905)"
+        },
+        "deepseek-ai/DeepSeek-V3.1": {
+          // https://api-docs.deepseek.com/quick_start/parameter_settings
+          "name": "DeepSeek V3.1"
+        }
       }
     }
   },
+
+  /* **************************************************************************
+   * LSP
+   * ************************************************************************ */
+  "lsp": {},
+
   /* **************************************************************************
   * UI/UX
   * ************************************************************************ */
