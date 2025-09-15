@@ -4,8 +4,8 @@
   /* **************************************************************************
   * MODEL
   * ************************************************************************ */
-  "model": "github-copilot/claude-sonnet-4",
-  "small_model": "github-copilot/gpt-4.1",
+  "model": "github-copilot/gpt-5-mini",
+  "small_model": "github-copilot/gpt-5-mini",
 
   /* **************************************************************************
   * PERMISSIONS
