@@ -72,13 +72,64 @@
         "baseURL": "https://llm.chutes.ai/v1"
       },
       "models": {
+        "openai/gpt-oss-120b": {
+          "name": "GPT OSS 120B"
+        },
         "moonshotai/Kimi-K2-Instruct-0905": {
           // https://huggingface.co/moonshotai/Kimi-K2-Instruct-0905
-          "name": "Kimi K2 (0905)"
+          "name": "Kimi K2 (0905)",
+          "options": {
+            "temperature": 0.6
+          }
         },
-        "deepseek-ai/DeepSeek-V3.1": {
+        "zai-org/GLM-4.5-FP8": {
+          "name": "GLM 4.5",
+          "options": {
+            "temperature": 0.6,
+            "top_p": 1.0
+          }
+        },
+        "deepseek-ai/DeepSeek-V3.1:THINKING": {
           // https://api-docs.deepseek.com/quick_start/parameter_settings
-          "name": "DeepSeek V3.1"
+          // https://docs.unsloth.ai/models/deepseek-v3.1-how-to-run-locally
+          "name": "DeepSeek V3.1 (Reasoning)",
+          "options": {
+            "temperature": 0.6
+          }
+        },
+        "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": {
+          // https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8
+          // https://docs.unsloth.ai/models/qwen3-coder-how-to-run-locally
+          "name": "Qwen3 Coder",
+          "options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "repetition_penalty": 1.05,
+            "max_tokens": 65536
+          }
+        },
+        "Qwen/Qwen3-235B-A22B-Thinking-2507": {
+          // https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507
+          "name": "Qwen3 235B (Reasoning)",
+          "options": {
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0,
+            "max_tokens": 32768 // REVIEW: test
+          }
+        },
+        "Qwen/Qwen3-Next-80B-A3B-Thinking": {
+          // https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Thinking
+          "name": "Qwen3 Next (Reasoning)",
+          "options": {
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0,
+            "max_tokens": 32768 // REVIEW: test
+          }
         }
       }
     }
