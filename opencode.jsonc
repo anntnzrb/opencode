@@ -23,6 +23,45 @@
   },
 
   /* **************************************************************************
+  * MODES
+  * ************************************************************************ */
+
+    "mode": {
+      "build": {
+        "tools": {
+          "bash": true,
+          "edit": true,
+          "glob": true,
+          "grep": true,
+          "ls": false, // prefer glob/grep
+          "multiedit": true,
+          "read": true,
+          "task": true,
+          "todowrite": true,
+          "webfetch": true,
+          "websearch": true,
+          "write": true
+        }
+      },
+      "plan": {
+        "tools": {
+          "bash": false,
+          "edit": false,
+          "glob": true,
+          "grep": true,
+          "ls": false, // prefer glob/grep
+          "multiedit": false,
+          "read": true,
+          "task": true,
+          "todowrite": true,
+          "webfetch": true,
+          "websearch": true,
+          "write": false
+        }
+      }
+  },
+
+  /* **************************************************************************
   * PROVIDERS
   * ************************************************************************ */
   "provider": {
